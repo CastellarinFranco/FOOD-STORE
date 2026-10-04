@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOOD STORE</title>
+    <!-- Vincula al CSS -->
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    
+<header>
+    <h1>Food Store</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#">Mis Pedidos</a></li>
+            <li><a href="#">Carrito</a></li>
+            <li><a href="admin.html">Panel Admin</a></li>
+            <!--enlace al login -->
+            <li><a href="login.html">Iniciar Sesión</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="contenedor">
+    <aside>
+        <h2>Categorías</h2>
+        <!-- CAJA VACÍA 1: Acá JavaScript inyectará las categorías -->
+        <ul id="lista-categorias"></ul>
+    </aside>
+
+    <main>
+        <div class="buscador-container">
+            <form style="display: flex; width: 100%; gap: 10px;">
+                <label for="buscador">Buscar productos:</label>
+                <input type="text" id="buscador" name="buscador" placeholder="Ej: Hamburguesa doble">
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+
+        <h2>Productos Destacados</h2>
+        
+        <!-- CAJA VACÍA 2: Acá JavaScript inyectará los productos -->
+        <section id="contenedor-productos" class="productos-grid"></section>
+    </main>
+</div>
+
+<footer>
+    <p>&copy; 2026 Food Store. Todos los derechos reservados.</p>
+    <p>Franco Castellarin - Legajo 51931</p>
+    <p>Contacto: <a href="mailto:franco.castellarin@alumnos.frm.utn.edu.ar">franco.castellarin@alumnos.frm.utn.edu.ar</a></p>
+</footer>
+
+<!-- Conexión a JavaScript (Obligatoria para el TP) -->
+ <script src="js/data.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
+
