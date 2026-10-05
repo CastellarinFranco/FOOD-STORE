@@ -6,6 +6,7 @@
     <title>FOOD STORE</title>
     <!-- Vincula al CSS -->
     <link rel="stylesheet" href="../css/index.css">
+    <script type="module" src="/src/main.ts"></script>
 </head>
 <body>
     
@@ -13,13 +14,18 @@
     <h1>Food Store</h1>
     <nav>
         <ul>
-            <li><a href="/index.html">Inicio</a></li>
-            <li><a href="#">Mis Pedidos</a></li>
-            <li><a href="#">Carrito</a></li>
-            <li><a href="/src/pages/admin/admin.html">Panel Admin</a></li>
-            <!--enlace al login -->
-            <li><a href="/src/pages/auth/login/login.html">Iniciar Sesión</a></li>
-        </ul>
+<ul>
+    <li><a href="/index.html">Inicio</a></li>
+    <li><a href="#">Mis Pedidos</a></li>
+    <li><a href="#">Carrito</a></li>
+    <li><a href="/src/pages/admin/admin.html">Panel Admin</a></li>
+    
+    <!-- Este es el ÚNICO enlace de login que tiene que quedar -->
+    <li id="item-login"><a href="/src/pages/auth/login/login.html">Iniciar Sesión</a></li>
+    
+    <!-- Y este queda vacío esperando que el script le inyecte el nombre -->
+    <li id="info-usuario"></li>
+</ul>
     </nav>
 </header>
 

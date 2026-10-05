@@ -24,7 +24,7 @@ formLogin.addEventListener('submit', (evento) => {
         alert(`¡Bienvenido de vuelta, ${usuarioEncontrado.nombre}!`);
         
         // Guardamos quién es el usuario que acaba de iniciar sesión
-        localStorage.setItem('usuarioActivo', JSON.stringify(usuarioEncontrado));
+        localStorage.setItem('userData', JSON.stringify(usuarioEncontrado));
         
         // Lo mandamos al inicio de la tienda (ajustamos la ruta con los saltos)
         window.location.href = '../../../../index.html';

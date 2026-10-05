@@ -11,6 +11,11 @@ formRegistro.addEventListener('submit', (evento) => {
     const emailInput = document.getElementById('email') as HTMLInputElement;
     const passwordInput = document.getElementById('password') as HTMLInputElement;
 
+    if (passwordInput.value.length < 8) {
+        alert('La contraseña debe tener al menos 8 caracteres.');
+        return; // El return hace que el código frene acá y no siga leyendo hacia abajo
+    }
+
     // 2. Creamos el objeto usuario (forzando el rol 'client' como pide el TP)
     const nuevoUsuario: IUser = {
         id: crypto.randomUUID(), // Genera un ID único automático
@@ -36,4 +41,9 @@ formRegistro.addEventListener('submit', (evento) => {
     
     // Limpiamos el formulario
     formRegistro.reset();
+
+    //Lo mandamos automáticamente al Login
+    setTimeout(() => {
+        window.location.assign('/src/pages/auth/login/login.html');
+    }, 100);
 });
