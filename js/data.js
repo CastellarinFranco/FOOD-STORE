@@ -6,7 +6,7 @@ const productos = [
        nombre: "Hamburguesa Triple", 
        descripcion: "Triple carne, cheddar y bacon", 
        precio: 25000, 
-       imagen: "img/hamburguesa.jpg", 
+       imagen: "/img/hamburguesa.jpg", 
        categoria: "Hamburguesas" 
    }, 
    { 
@@ -14,7 +14,7 @@ const productos = [
        nombre: "Pizza Muzzarella", 
        descripcion: "Salsa casera y orégano", 
        precio: 18000, 
-       imagen: "img/pizza.jpg", 
+       imagen: "/img/pizza.jpg", 
        categoria: "Pizzas" 
    },  
 
@@ -23,7 +23,7 @@ const productos = [
         nombre: "Papas con Cheddar",
         descripcion: "Papas fritas crocantes con abundante queso cheddar y panceta.",
         precio: 8000,
-        imagen: "img/papas.jpg",
+        imagen: "/img/papas.jpg",
         categoria: "Papas Fritas"
     },
 
@@ -32,7 +32,7 @@ const productos = [
         nombre: "Coca Cola 1.5L",
         descripcion: "Gaseosa línea Coca Cola bien helada.",
         precio: 2500,
-        imagen: "img/cocacola.jpg", 
+        imagen: "/img/cocacola.jpg", 
         categoria: "Bebidas"
     }
 ];
