@@ -32,7 +32,6 @@ const productos = [
         nombre: "Coca Cola 1.5L",
         descripcion: "Gaseosa línea Coca Cola bien helada.",
         precio: 2500,
-        // Usamos la imagen de relleno que sugiere tu profe hasta que consigas una real
         imagen: "img/cocacola.jpg", 
         categoria: "Bebidas"
     }
