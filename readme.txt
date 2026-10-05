@@ -51,3 +51,5 @@ La protección de rutas implementada en este proyecto **NO ES SEGURA** y no debe
 │   └── utils/                # Utilidades secundarias de navegación
 ├── package.json              # Dependencias y scripts
 └── README.md                 # Este archivo
+
+Repositorio de GitHub: https://github.com/CastellarinFranco/FOOD-STORE
