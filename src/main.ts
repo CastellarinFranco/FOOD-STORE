@@ -3,7 +3,7 @@ import { IUser } from './types/IUser';
 function protegerRutas() {
     // 1. Vemos en qué página está intentando entrar el usuario
     const rutaActual = window.location.pathname;
-    
+
     // 2. Traemos al usuario que inició sesión en el Paso 2
     const usuarioStorage = localStorage.getItem('userData');
     const usuarioActivo: IUser | null = usuarioStorage ? JSON.parse(usuarioStorage) : null;
@@ -27,14 +27,30 @@ function protegerRutas() {
     // Buscamos los elementos del menú en el HTML
     const infoUsuario = document.getElementById('info-usuario');
     const itemLogin = document.getElementById('item-login');
+    const itemLogout = document.getElementById('item-logout');
+    const btnLogout = document.getElementById('btn-logout');
 
     // Si hay un usuario logueado y los elementos del menú existen en esta página:
     if (usuarioActivo && infoUsuario && itemLogin) {
         // Ocultamos el botón original de "Iniciar Sesión"
         itemLogin.style.display = 'none';
-        
+
         // Inyectamos el texto con el nombre del usuario
         infoUsuario.innerHTML = `Nombre de Usuario: <strong>${usuarioActivo.nombre}</strong>`;
+
+        // Mostramos el botón de cerrar sesión
+        if (itemLogout) {
+            itemLogout.style.display = 'inline-block';
+        }
+
+        // Evento para cerrar sesión
+        if (btnLogout) {
+            btnLogout.addEventListener('click', (e) => {
+                e.preventDefault();
+                localStorage.removeItem('userData');
+                window.location.href = '/src/pages/auth/login/login.html';
+            });
+        }
     }
 }
 
